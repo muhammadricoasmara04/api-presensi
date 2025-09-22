@@ -1,7 +1,5 @@
 @baseUrl = http://localhost:8000/api
-@token =1|IT82m1AakCL0LDNQIb5muCFwnKkIpjY8lyxxnrdLbfef189b
-
-### Register
+@token =47|N6JpSDU0rdyPFU2WXSbQxyuFN6KZKIMnR90rQ2eW32d2d321
 POST {{baseUrl}}/register
 Content-Type: application/json
 
@@ -19,3 +17,13 @@ Content-Type: application/json
   "email": "user@gmail.com",
   "password": "123456"
 }
+
+###
+GET {{baseUrl}}/users/profile
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+POST {{baseUrl}}/refresh
+Authorization: Bearer {{token}}
+Accept: application/json

@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
 
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -57,7 +59,7 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'Akun berhasil diregistrasi',
             'user'    => $user
-        ],201);
+        ], 201);
     }
     public function logout(Request $request)
     {
